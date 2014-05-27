@@ -21,6 +21,9 @@
 		BBB9B9FD193538AA00B76334 /* FizzBuzzTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BBB9B9FC193538AA00B76334 /* FizzBuzzTests.m */; };
 		BBB9BA0819353B2500B76334 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBB9BA0719353B2500B76334 /* Main.storyboard */; };
 		BBB9BA0B19353BC900B76334 /* ZNFizzBuzzClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BBB9BA0A19353BC900B76334 /* ZNFizzBuzzClient.m */; };
+		BBB9BA1719353EFD00B76334 /* libSHMKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB9BA1219353DD400B76334 /* libSHMKit.a */; };
+		BBB9BA1A19354ADF00B76334 /* ZNFizzBuzzAnswer.m in Sources */ = {isa = PBXBuildFile; fileRef = BBB9BA1919354ADF00B76334 /* ZNFizzBuzzAnswer.m */; };
+		BBB9BA1D1935514A00B76334 /* ZNFizzBuzzTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBB9BA1C1935514A00B76334 /* ZNFizzBuzzTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +33,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = BBB9B9D3193538AA00B76334;
 			remoteInfo = FizzBuzz;
+		};
+		BBB9BA1119353DD400B76334 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBB9BA0C19353DD400B76334 /* SHMKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F5E5C7F5189DE02600602FB0;
+			remoteInfo = SHMKit;
+		};
+		BBB9BA1319353DD400B76334 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBB9BA0C19353DD400B76334 /* SHMKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F5E5C805189DE02700602FB0;
+			remoteInfo = SHMKitTests;
+		};
+		BBB9BA1519353E0000B76334 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBB9BA0C19353DD400B76334 /* SHMKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F5E5C7F4189DE02600602FB0;
+			remoteInfo = SHMKit;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -53,6 +77,11 @@
 		BBB9BA0719353B2500B76334 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BBB9BA0919353BC900B76334 /* ZNFizzBuzzClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNFizzBuzzClient.h; sourceTree = "<group>"; };
 		BBB9BA0A19353BC900B76334 /* ZNFizzBuzzClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNFizzBuzzClient.m; sourceTree = "<group>"; };
+		BBB9BA0C19353DD400B76334 /* SHMKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SHMKit.xcodeproj; path = ext/SHMKit/SHMKit.xcodeproj; sourceTree = "<group>"; };
+		BBB9BA1819354ADF00B76334 /* ZNFizzBuzzAnswer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNFizzBuzzAnswer.h; sourceTree = "<group>"; };
+		BBB9BA1919354ADF00B76334 /* ZNFizzBuzzAnswer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNFizzBuzzAnswer.m; sourceTree = "<group>"; };
+		BBB9BA1B1935514A00B76334 /* ZNFizzBuzzTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNFizzBuzzTableViewController.h; sourceTree = "<group>"; };
+		BBB9BA1C1935514A00B76334 /* ZNFizzBuzzTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNFizzBuzzTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBB9BA1719353EFD00B76334 /* libSHMKit.a in Frameworks */,
 				BBB9B9DA193538AA00B76334 /* CoreGraphics.framework in Frameworks */,
 				BBB9B9DC193538AA00B76334 /* UIKit.framework in Frameworks */,
 				BBB9B9D8193538AA00B76334 /* Foundation.framework in Frameworks */,
@@ -82,6 +112,7 @@
 		BBB9B9CB193538AA00B76334 = {
 			isa = PBXGroup;
 			children = (
+				BBB9BA0C19353DD400B76334 /* SHMKit.xcodeproj */,
 				BBB9B9DD193538AA00B76334 /* FizzBuzz */,
 				BBB9B9F6193538AA00B76334 /* FizzBuzzTests */,
 				BBB9B9D6193538AA00B76334 /* Frameworks */,
@@ -112,13 +143,17 @@
 		BBB9B9DD193538AA00B76334 /* FizzBuzz */ = {
 			isa = PBXGroup;
 			children = (
-				BBB9B9E6193538AA00B76334 /* ZNAppDelegate.h */,
-				BBB9BA0919353BC900B76334 /* ZNFizzBuzzClient.h */,
-				BBB9B9E7193538AA00B76334 /* ZNAppDelegate.m */,
-				BBB9BA0A19353BC900B76334 /* ZNFizzBuzzClient.m */,
-				BBB9BA0719353B2500B76334 /* Main.storyboard */,
 				BBB9B9E9193538AA00B76334 /* Images.xcassets */,
+				BBB9BA0719353B2500B76334 /* Main.storyboard */,
 				BBB9B9DE193538AA00B76334 /* Supporting Files */,
+				BBB9B9E6193538AA00B76334 /* ZNAppDelegate.h */,
+				BBB9B9E7193538AA00B76334 /* ZNAppDelegate.m */,
+				BBB9BA1819354ADF00B76334 /* ZNFizzBuzzAnswer.h */,
+				BBB9BA1919354ADF00B76334 /* ZNFizzBuzzAnswer.m */,
+				BBB9BA0919353BC900B76334 /* ZNFizzBuzzClient.h */,
+				BBB9BA0A19353BC900B76334 /* ZNFizzBuzzClient.m */,
+				BBB9BA1B1935514A00B76334 /* ZNFizzBuzzTableViewController.h */,
+				BBB9BA1C1935514A00B76334 /* ZNFizzBuzzTableViewController.m */,
 			);
 			path = FizzBuzz;
 			sourceTree = "<group>";
@@ -152,6 +187,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BBB9BA0D19353DD400B76334 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BBB9BA1219353DD400B76334 /* libSHMKit.a */,
+				BBB9BA1419353DD400B76334 /* SHMKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,6 +210,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				BBB9BA1619353E0000B76334 /* PBXTargetDependency */,
 			);
 			name = FizzBuzz;
 			productName = FizzBuzz;
@@ -215,6 +260,12 @@
 			mainGroup = BBB9B9CB193538AA00B76334;
 			productRefGroup = BBB9B9D5193538AA00B76334 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BBB9BA0D19353DD400B76334 /* Products */;
+					ProjectRef = BBB9BA0C19353DD400B76334 /* SHMKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BBB9B9D3193538AA00B76334 /* FizzBuzz */,
@@ -222,6 +273,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BBB9BA1219353DD400B76334 /* libSHMKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSHMKit.a;
+			remoteRef = BBB9BA1119353DD400B76334 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BBB9BA1419353DD400B76334 /* SHMKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SHMKitTests.xctest;
+			remoteRef = BBB9BA1319353DD400B76334 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BBB9B9D2193538AA00B76334 /* Resources */ = {
@@ -249,9 +317,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBB9BA1D1935514A00B76334 /* ZNFizzBuzzTableViewController.m in Sources */,
 				BBB9B9E8193538AA00B76334 /* ZNAppDelegate.m in Sources */,
 				BBB9BA0B19353BC900B76334 /* ZNFizzBuzzClient.m in Sources */,
 				BBB9B9E4193538AA00B76334 /* main.m in Sources */,
+				BBB9BA1A19354ADF00B76334 /* ZNFizzBuzzAnswer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +340,11 @@
 			isa = PBXTargetDependency;
 			target = BBB9B9D3193538AA00B76334 /* FizzBuzz */;
 			targetProxy = BBB9B9F4193538AA00B76334 /* PBXContainerItemProxy */;
+		};
+		BBB9BA1619353E0000B76334 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SHMKit;
+			targetProxy = BBB9BA1519353E0000B76334 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

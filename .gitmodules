@@ -1,0 +1,3 @@
+[submodule "ext/SHMKit"]
+	path = ext/SHMKit
+	url = https://github.com/zdne/SHMKit.git

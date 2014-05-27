@@ -13,4 +13,7 @@
 // Returns the shared FizzBuzz client instance
 + (ZNFizzBuzzClient *)sharedFizzBuzzClient;
 
+// Solve FizzBuzz
+- (void)solveFizzBuzzWithCompletion:(void (^)(NSError* error, NSArray* result))completion;
+
 @end
