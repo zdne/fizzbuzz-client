@@ -50,13 +50,14 @@
  */
 - (void)solveFizzBuzzWithCompletion:(void (^)(NSError* error, NSArray* results))completion
 {
-    self.fizzBuzzAppURL = @"http://fizzbuzzaas.herokuapp.com";
-    //self.fizzBuzzAppURL = @"http://localhost:3000";
+    //self.fizzBuzzAppURL = @"http://fizzbuzzaas.herokuapp.com";
+    self.fizzBuzzAppURL = @"http://localhost:3000";
     
     // Set the FizzBuzz server URL
     self.sirenClient = [[SHMParser alloc] initWithSirenRoot:self.fizzBuzzAppURL];
     
     // Initialize the client - fetch API root
+    NSLog(@"following %@", self.fizzBuzzAppURL);
     [self.sirenClient retrieveRoot:^(NSError* error, SHMEntity* entity) {
 
         if (error) {
@@ -125,6 +126,8 @@
     // Nothing to do
     if (completion)
         completion(nil, self.results);
+    
+    NSLog(@"-- All done --");
 }
 
 /*

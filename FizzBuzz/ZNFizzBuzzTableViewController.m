@@ -9,6 +9,7 @@
 #import "ZNFizzBuzzTableViewController.h"
 #import "ZNFizzBuzzClient.h"
 #import "ZNFizzBuzzAnswer.h"
+#import "MBProgressHUD.h"
 
 @interface ZNFizzBuzzTableViewController ()
 @property (strong, nonatomic) NSArray* results;
@@ -29,14 +30,27 @@
 {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
+    // Setup the refresh control
+    UIRefreshControl *refresh = [[UIRefreshControl alloc] init];
+    refresh.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to Refresh FizzBuzz"];
+    [refresh addTarget:self action:@selector(solveFizzBuzz) forControlEvents:UIControlEventValueChanged];
+    self.refreshControl = refresh;
+
+    // Solve FizzBuzz
+    [self solveFizzBuzz];
+}
+
+- (void)solveFizzBuzz
+{
+    if (!self.refreshControl.refreshing)
+        [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+
     __block ZNFizzBuzzTableViewController* blockSelf = self;
     [[ZNFizzBuzzClient sharedFizzBuzzClient] solveFizzBuzzWithCompletion:^(NSError *error, NSArray *result) {
+        
+        [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
+        [blockSelf.refreshControl endRefreshing];
+        
         if (error) {
             NSLog(@"Error solving the FizzBuzz: %@", error.localizedDescription);
             return;
@@ -51,6 +65,12 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:YES];
+    [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
 }
 
 #pragma mark - Table view data source
