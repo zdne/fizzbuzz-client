@@ -43,7 +43,13 @@
                             <outlet property="delegate" destination="vTu-8V-abW" id="Uyf-xI-tXL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="FizzBuzz Answers" id="HXd-XC-zOZ"/>
+                    <navigationItem key="navigationItem" title="FizzBuzz Answers" id="HXd-XC-zOZ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="xTB-WX-WtI">
+                            <connections>
+                                <action selector="trash:" destination="vTu-8V-abW" id="iH6-si-UOa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J6a-tK-yzI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

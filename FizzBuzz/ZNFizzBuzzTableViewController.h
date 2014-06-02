@@ -10,4 +10,6 @@
 
 @interface ZNFizzBuzzTableViewController : UITableViewController
 
+- (IBAction)trash:(id)sender;
+
 @end
